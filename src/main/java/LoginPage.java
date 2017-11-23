@@ -35,6 +35,7 @@ public class LoginPage {
     }
 
     public LoginPage openLoginPage() {
+        //Doesn't work
         driver.get("http://demo.testarena.pl/zaloguj");
         return this;
     }
