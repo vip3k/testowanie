@@ -1,8 +1,9 @@
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by zp300424 on 27.05.2017.
@@ -17,12 +18,13 @@ public class MainPage {
     WebElement headTop;
 
 
+
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void assertUserIsLoggedIn() {
-        Assert.assertTrue(headTop.isDisplayed());
+        assertTrue(driver.findElement(By.id("head-top")).isDisplayed());
     }
 
     public void clickZadania() {
