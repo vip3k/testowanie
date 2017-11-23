@@ -14,7 +14,7 @@ public class MainTest {
 
     @Before
     public void openTestArena() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe ");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         loginPage = PageFactory.initElements(driver, LoginPage.class);

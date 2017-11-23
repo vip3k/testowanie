@@ -12,8 +12,6 @@ public class LoginTest extends MainTest{
                 .setpPasswordInput("sumXQQ72$L")
                 .loginButton()
                 .assertUserIsLoggedIn();
-
-
     }
 
 
@@ -23,7 +21,6 @@ public class LoginTest extends MainTest{
                 .setUser("Wrongusertestname")
                 .setpPasswordInput("haslo123")
                 .loginButton();
-
     }
 
 

@@ -13,13 +13,16 @@ public class MainPage {
     @FindBy(xpath = "//a[@href=\"http://demo.testarena.pl/JB/tasks\"]")
     WebElement clickZadania;
 
+    @FindBy(id = "head-top")
+    WebElement headTop;
+
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void assertUserIsLoggedIn() {
-        Assert.assertTrue(driver.findElement(By.xpath("//a[@href='/pulls']")).isDisplayed());
+        Assert.assertTrue(headTop.isDisplayed());
     }
 
     public void clickZadania() {
