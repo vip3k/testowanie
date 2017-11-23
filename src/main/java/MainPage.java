@@ -11,8 +11,8 @@ import static org.junit.Assert.assertTrue;
 public class MainPage {
 
     WebDriver driver;
-    @FindBy(xpath = "//a[@href=\"http://demo.testarena.pl/JB/tasks\"]")
-    WebElement clickZadania;
+    @FindBy(xpath = "http://demo.testarena.pl/JB/project_view")
+    WebElement clickProject;
 
     @FindBy(id = "head-top")
     WebElement headTop;
@@ -27,8 +27,8 @@ public class MainPage {
         assertTrue(driver.findElement(By.id("head-top")).isDisplayed());
     }
 
-    public void clickZadania() {
-        clickZadania.click();
+    public void clickProject() {
+        clickProject.click();
     }
 
 }
