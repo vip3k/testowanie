@@ -8,28 +8,26 @@ import org.testng.annotations.BeforeTest;
 /**
  * Created by tomas on 2017-11-23.
  */
-public class MainTest {
+public class TestBase {
 
     WebDriver driver;
     LoginPage loginPage;
 
-    @BeforeTest
+    @Before
     public void openTestArena() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.openLoginPage();
-        loginPage
-                .setUser("administrator@testarena.pl")
-                .setpPasswordInput("sumXQQ72$L")
-                .loginButton()
-                .assertUserIsLoggedIn();
+
+
+
     }
 
 
     @After
-    public void logout(){
+    public void logout() {
         driver.close();
     }
 

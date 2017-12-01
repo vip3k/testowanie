@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class LoginPage {
@@ -39,4 +40,12 @@ public class LoginPage {
         driver.get("http://demo.testarena.pl/zaloguj");
         return this;
     }
+
+    public MainPage login(String login, String password){
+        setUser("administrator@testarena.pl");
+        setpPasswordInput("sumXQQ72$L");
+        loginButton();
+        return PageFactory.initElements(driver, MainPage.class);
+    }
+
 }

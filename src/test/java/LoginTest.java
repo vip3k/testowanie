@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 
-public class LoginTest extends MainTest{
+public class LoginTest extends TestBase {
 
 
     @Test
@@ -17,7 +17,7 @@ public class LoginTest extends MainTest{
 
     @Test
     public void shouldNotLogin() {
-        super.loginPage.openLoginPage()
+        super.loginPage
                 .setUser("Wrongusertestname")
                 .setpPasswordInput("haslo123")
                 .loginButton();

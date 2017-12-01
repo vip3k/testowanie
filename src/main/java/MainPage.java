@@ -11,12 +11,11 @@ import static org.junit.Assert.assertTrue;
 public class MainPage {
 
     WebDriver driver;
-    @FindBy(xpath = "http://demo.testarena.pl/JB/project_view")
+    @FindBy(css = "a[href='http://demo.testarena.pl/11/project_view']")
     WebElement clickProject;
 
     @FindBy(id = "head-top")
     WebElement headTop;
-
 
 
     public MainPage(WebDriver driver) {
@@ -27,8 +26,10 @@ public class MainPage {
         assertTrue(driver.findElement(By.id("head-top")).isDisplayed());
     }
 
-    public void clickProject() {
+    public ProjectPage clickProject() {
         clickProject.click();
+        return new ProjectPage(driver);
     }
+
 
 }
