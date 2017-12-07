@@ -1,21 +1,18 @@
 import org.junit.Test;
 
 /**
- * Created by tomas on 2017-11-23.
+ * Created by tomas on 2017-12-07.
  */
-public class ProjectTest extends TestBase {
+public class EnvironmentsTest extends TestBase {
 
     private static String login = "administrator@testarena.pl";
     private static String pass = "sumXQQ72$L";
 
     @Test
-    public void goToMenagePage() {
+    public void goToEnvironmentPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickProject();
+        mainPage.clickEnvironments();
 
 
     }
-
-
-
 }

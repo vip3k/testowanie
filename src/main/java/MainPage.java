@@ -11,9 +11,12 @@ import static org.junit.Assert.assertTrue;
 public class MainPage {
 
     WebDriver driver;
-    @FindBy(css = "a[href='http://demo.testarena.pl/11/project_view']")
+    @FindBy(css = "a[href='http://demo.testarena.pl/DS/project_view']")
     WebElement clickProject;
-
+    @FindBy(linkText = "Releases")
+    WebElement clickReleases;
+    @FindBy(linkText = "Environments")
+    WebElement clickEnvironments;
     @FindBy(id = "head-top")
     WebElement headTop;
 
@@ -28,6 +31,17 @@ public class MainPage {
 
     public ProjectPage clickProject() {
         clickProject.click();
+        return new ProjectPage(driver);
+    }
+
+    public ProjectPage clickReleases() {
+        clickReleases.click();
+        return new ProjectPage(driver);
+
+    }
+
+    public ProjectPage clickEnvironments() {
+        clickEnvironments.click();
         return new ProjectPage(driver);
     }
 
