@@ -9,7 +9,7 @@ public class ProjectTest extends TestBase {
     private static String pass = "sumXQQ72$L";
 
     @Test
-    public void goToMenagePage() {
+    public void goToProjectPage() {
         MainPage mainPage = loginPage.login(login, pass);
         mainPage.clickProject();
 

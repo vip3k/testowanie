@@ -1,18 +1,18 @@
 import org.junit.Test;
 
 /**
- * Created by tomas on 2017-12-07.
+ * Created by tosa on 2017-12-08.
  */
-public class EnvironmentsTest extends TestBase {
-
+public class FilesTest extends TestBase{
     private static String login = "administrator@testarena.pl";
     private static String pass = "sumXQQ72$L";
 
     @Test
-    public void goToEnvironmentsPage() {
+    public void goToFilesPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickEnvironments();
+        mainPage.clickFiles();
 
 
     }
+
 }

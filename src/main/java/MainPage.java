@@ -17,6 +17,18 @@ public class MainPage {
     WebElement clickReleases;
     @FindBy(linkText = "Environments")
     WebElement clickEnvironments;
+    @FindBy(linkText = "Versions")
+    WebElement clickVersions;
+    @FindBy(linkText = "Tags")
+    WebElement clickTags;
+    @FindBy(linkText = "Tasks")
+    WebElement clickTasks;
+    @FindBy(linkText = "Defects")
+    WebElement clickDefects;
+    @FindBy(linkText = "Test base")
+    WebElement clickTestBase;
+    @FindBy (linkText = "Files")
+    WebElement clickFiles;
     @FindBy(id = "head-top")
     WebElement headTop;
 
@@ -34,16 +46,45 @@ public class MainPage {
         return new ProjectPage(driver);
     }
 
-    public ProjectPage clickReleases() {
+    public ReleasesPage clickReleases() {
         clickReleases.click();
-        return new ProjectPage(driver);
+        return new ReleasesPage(driver);
 
     }
 
-    public ProjectPage clickEnvironments() {
+    public EnvironmentsPage clickEnvironments() {
         clickEnvironments.click();
-        return new ProjectPage(driver);
+        return new EnvironmentsPage(driver);
     }
 
+    public VersionsPage clickVersions() {
+        clickVersions.click();
+        return new VersionsPage(driver);
+    }
 
+    public TagsPage clickTags() {
+        clickTags.click();
+        return new TagsPage(driver);
+    }
+
+    public TasksPage clickTasks() {
+        clickTasks.click();
+        return new TasksPage(driver);
+    }
+
+    public DefectsPage clickDefects() {
+        clickDefects.click();
+        return new DefectsPage(driver);
+    }
+
+    public TestBasePage clickTestBase() {
+        clickTestBase.click();
+        return new TestBasePage(driver);
+
+    }
+
+    public FilesPage clickFiles() {
+        clickFiles.click();
+        return new FilesPage(driver);
+    }
 }
