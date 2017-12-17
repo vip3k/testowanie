@@ -9,17 +9,17 @@ public class LoginTest extends TestBase {
 
         super.loginPage
                 .setUser("administrator@testarena.pl")
-                .setpPasswordInput("sumXQQ72$L")
+                .setPasswordInput("sumXQQ72$L")
                 .loginButton()
                 .assertUserIsLoggedIn();
-    }
+            }
 
 
     @Test
     public void shouldNotLogin() {
         super.loginPage
                 .setUser("Wrongusertestname")
-                .setpPasswordInput("haslo123")
+                .setPasswordInput("haslo123")
                 .loginButton();
     }
 

@@ -24,7 +24,7 @@ public class LoginPage {
     }
 
 
-    public LoginPage setpPasswordInput(String password) {
+    public LoginPage setPasswordInput(String password) {
         passwordInput.sendKeys(password);
         return this;
     }
@@ -36,14 +36,13 @@ public class LoginPage {
     }
 
     public LoginPage openLoginPage() {
-        //Doesn't work
         driver.get("http://demo.testarena.pl/zaloguj");
         return this;
     }
 
     public MainPage login(String login, String password){
         setUser("administrator@testarena.pl");
-        setpPasswordInput("sumXQQ72$L");
+        setPasswordInput("sumXQQ72$L");
         loginButton();
         return PageFactory.initElements(driver, MainPage.class);
     }

@@ -10,7 +10,7 @@ public class DefectsTest extends TestBase{
     @Test
     public void goToDefectsPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickDefects();
+        mainPage.clickDefects().verifyDefectsPage();
 
 
     }

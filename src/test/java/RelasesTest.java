@@ -11,6 +11,6 @@ public class RelasesTest extends TestBase {
     @Test
     public void goToReleasesPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickReleases();
+        mainPage.clickReleases().verifyReleasesPage();
     }
 }

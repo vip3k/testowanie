@@ -11,7 +11,7 @@ public class TestBaseTest extends TestBase{
     @Test
     public void goToTestBasePage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickTestBase();
+        mainPage.clickTestBase().verifyTestBasePage();
 
 
     }

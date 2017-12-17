@@ -1,6 +1,9 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by tosa on 2017-11-27.
@@ -8,18 +11,13 @@ import org.openqa.selenium.support.FindBy;
 public class MenageProjectPage {
 
     WebDriver driver;
-    @FindBy(xpath = "//a[@href='http://demo.testarena.pl/administration/project_view/206']")
-    WebElement project;
+
 
     public MenageProjectPage(WebDriver driver) {
         this.driver = driver;
     }
 
-
-    public MenageProjectPage clickMenage() {
-        project.click();
-        return new MenageProjectPage(driver);
+    public void verifyMenagePage() {
+        assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Project properties')]")).isDisplayed());
     }
-
-
 }

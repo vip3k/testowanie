@@ -11,8 +11,7 @@ public class EnvironmentsTest extends TestBase {
     @Test
     public void goToEnvironmentsPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickEnvironments();
-
+        mainPage.clickEnvironments().verifyEnvironmentsPage();
 
     }
 }

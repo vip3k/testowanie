@@ -11,7 +11,7 @@ public class TagsTest extends TestBase {
     @Test
     public void goToTagsPage() {
         MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickTags();
+        mainPage.clickTags().verifyTagsPage();
 
 
     }
