@@ -1,3 +1,6 @@
+package Versions;
+
+import Main.MainPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -6,12 +9,12 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by tomas on 2017-11-25.
  */
-public class VersionsPage {
+public class VersionsPage extends MainPage {
 
     WebDriver driver;
 
     public VersionsPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void verifyVersionsPage() {

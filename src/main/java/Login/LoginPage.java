@@ -1,10 +1,13 @@
+package Login;
+
+import Main.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage {
+public class LoginPage{
     WebDriver driver;
 
     @FindBy(id = "email")
@@ -40,9 +43,9 @@ public class LoginPage {
         return this;
     }
 
-    public MainPage login(String login, String password){
-        setUser("administrator@testarena.pl");
-        setPasswordInput("sumXQQ72$L");
+    public MainPage login(String login, String password) {
+        setUser(login);
+        setPasswordInput(password);
         loginButton();
         return PageFactory.initElements(driver, MainPage.class);
     }

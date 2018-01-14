@@ -1,7 +1,7 @@
+package Project;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import static org.junit.Assert.assertTrue;
 
@@ -12,7 +12,6 @@ public class MenageProjectPage {
 
     WebDriver driver;
 
-
     public MenageProjectPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -20,4 +19,5 @@ public class MenageProjectPage {
     public void verifyMenagePage() {
         assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Project properties')]")).isDisplayed());
     }
+
 }

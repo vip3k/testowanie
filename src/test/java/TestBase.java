@@ -1,9 +1,9 @@
+import Login.LoginPage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeTest;
 
 /**
  * Created by tomas on 2017-11-23.
@@ -12,6 +12,7 @@ public class TestBase {
 
     WebDriver driver;
     LoginPage loginPage;
+
 
     @Before
     public void openTestArena() {

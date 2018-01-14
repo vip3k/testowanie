@@ -9,8 +9,9 @@ public class FilesTest extends TestBase{
 
     @Test
     public void goToFilesPage() {
-        MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickFiles();
+       super.loginPage
+               .login(login, pass)
+               .clickFiles();
 
 
     }

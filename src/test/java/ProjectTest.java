@@ -1,3 +1,4 @@
+import Project.ProjectPage;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 
@@ -6,25 +7,28 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class ProjectTest extends TestBase {
 
+
     private static String login = "administrator@testarena.pl";
     private static String pass = "sumXQQ72$L";
 
+
     @Test
     public void goToProjectPage() {
-        MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickProject().verifyProjectPage();
+        super.loginPage
+                .login(login, pass)
+                .clickProject()
+                .verifyProjectPage();
 
 
     }
+
 
     @Test
-    public void goToMenagePage(){
-        MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickProject();
+    public void goToMenagePage() {
         ProjectPage projectPage = PageFactory.initElements(driver, ProjectPage.class);
-        projectPage.clickMenage().verifyMenagePage();
+        loginPage.login(login, pass).clickProject();
+        projectPage.clickMenage();
     }
-
 
 
 }

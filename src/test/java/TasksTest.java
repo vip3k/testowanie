@@ -10,8 +10,10 @@ public class TasksTest extends TestBase {
 
     @Test
     public void goToTasksPage() {
-        MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickTasks().verifyTasksPage();
+        super.loginPage
+                .login(login, pass)
+                .clickTasks()
+                .verifyTasksPage();
 
 
     }

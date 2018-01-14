@@ -9,8 +9,10 @@ public class VersionsTest extends TestBase {
 
     @Test
     public void goToVersionsPage() {
-        MainPage mainPage = loginPage.login(login, pass);
-        mainPage.clickVersions().verifyVersionsPage();
+        super.loginPage
+                .login(login, pass)
+                .clickVersions()
+                .verifyVersionsPage();
 
 
     }

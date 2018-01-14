@@ -1,3 +1,14 @@
+package Main;
+
+import Defects.DefectsPage;
+import Defects.Releases.ReleasesPage;
+import Environments.EnvironmentsPage;
+import Files.FilesPage;
+import Project.ProjectPage;
+import Tags.TagsPage;
+import Tasks.TasksPage;
+import TestBase.TestBasePage;
+import Versions.VersionsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 public class MainPage {
 
     WebDriver driver;
-    @FindBy(css = "a[href='http://demo.testarena.pl/DS/project_view']")
+    @FindBy(linkText = "Project")
     WebElement clickProject;
     @FindBy(linkText = "Releases")
     WebElement clickReleases;
@@ -29,8 +40,9 @@ public class MainPage {
     WebElement clickTestBase;
     @FindBy (linkText = "Files")
     WebElement clickFiles;
-    @FindBy(id = "head-top")
-    WebElement headTop;
+    @FindBy (xpath = "//*[contains(@alt, 'polski')]")
+    WebElement polishLanguage;
+
 
 
     public MainPage(WebDriver driver) {
@@ -87,4 +99,5 @@ public class MainPage {
         clickFiles.click();
         return new FilesPage(driver);
     }
+
 }

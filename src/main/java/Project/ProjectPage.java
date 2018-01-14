@@ -1,7 +1,10 @@
+package Project;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -13,9 +16,9 @@ public class ProjectPage {
 
     WebDriver driver;
 
-    @FindBy(css = "a[href=\'http://demo.testarena.pl/administration/project_view/205\']")
+    @FindBy(css = "a[href=\'http://demo.testarena.pl/administration/project_view/203\']")
     WebElement menage;
-    @FindBy(xpath = "//a[@class='open button_link'] [@href='#']")
+    @FindBy(xpath = "//a[@class='open button_link'] [@href='http://demo.testarena.pl/administration/project_view/203']")
     WebElement attchamentbutton;
     @FindBy(xpath = "/a[@href='http://demo.testarena.pl/fefg/project_add_plan_ajax'")
     WebElement addAttachmentPlan;
@@ -43,8 +46,7 @@ public class ProjectPage {
 
     public MenageProjectPage clickMenage() {
         menage.click();
-        return new MenageProjectPage(driver);
-    }
+        return new MenageProjectPage(driver);    }
 
 
     public void addattchment(){
