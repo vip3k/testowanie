@@ -5,12 +5,10 @@ import org.junit.Test;
  */
 public class EnvironmentsTest extends TestBase {
 
-    private static String login = "administrator@testarena.pl";
-    private static String pass = "sumXQQ72$L";
 
     @Test
     public void goToEnvironmentsPage() {
-        super.loginPage.login(login, pass)
+        super.getLoginPage()
                 .clickEnvironments()
                 .verifyEnvironmentsPage();
 

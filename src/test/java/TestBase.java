@@ -1,4 +1,5 @@
 import Login.LoginPage;
+import Main.MainPage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
  * Created by tomas on 2017-11-23.
  */
 public class TestBase {
-
+    private static String login = "administrator@testarena.pl";
+    private static String pass = "sumXQQ72$L";
     WebDriver driver;
     LoginPage loginPage;
 
@@ -23,7 +25,6 @@ public class TestBase {
         loginPage.openLoginPage();
 
 
-
     }
 
 
@@ -32,4 +33,15 @@ public class TestBase {
         driver.close();
     }
 
+
+    public TestBase page() {
+        return PageFactory.initElements(driver, TestBase.class);
+    }
+
+    public MainPage getLoginPage() {
+        return loginPage.login(login, pass);
+    }
+
+
 }
+

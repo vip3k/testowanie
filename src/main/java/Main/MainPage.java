@@ -1,7 +1,7 @@
 package Main;
 
 import Defects.DefectsPage;
-import Defects.Releases.ReleasesPage;
+import Releases.ReleasesPage;
 import Environments.EnvironmentsPage;
 import Files.FilesPage;
 import Project.ProjectPage;
