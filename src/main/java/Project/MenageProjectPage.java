@@ -2,6 +2,7 @@ package Project;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,6 +15,7 @@ public class MenageProjectPage {
 
     public MenageProjectPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
     public void verifyMenagePage() {

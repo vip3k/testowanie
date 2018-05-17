@@ -20,5 +20,6 @@ public class TestBasePage extends MainPage {
         assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Test base')]")).isDisplayed());
     }
 
+    
 
 }

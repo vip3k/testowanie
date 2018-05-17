@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,42 +15,46 @@ import static org.junit.Assert.assertTrue;
 public class ProjectPage {
 
 
-    WebDriver driver;
-
-    @FindBy(css = "a[href=\'http://demo.testarena.pl/administration/project_view/203\']")
+    @FindBy(css = ".open[href*='project_view']")
     WebElement menage;
-    @FindBy(xpath = "//a[@class='open button_link'] [@href='http://demo.testarena.pl/administration/project_view/203']")
+    @FindBy(css = "li >a.open[href='#']")
     WebElement attchamentbutton;
     @FindBy(xpath = "/a[@href='http://demo.testarena.pl/fefg/project_add_plan_ajax'")
     WebElement addAttachmentPlan;
-    @FindBy(xpath = "/a[@href='http://demo.testarena.pl/fefg/project_add_documentation_ajax'")
+    @FindBy(css = "li >a.open[href='#']")
     WebElement addAttachmentDocumentation;
-    @FindBy(xpath = "//a[@href='http://demo.testarena.pl/administration/project_view/206']")
+    @FindBy(css = "[href$='project_view']")
     WebElement project;
 
+    WebDriver driver;
 
     public ProjectPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
+
     }
 
 
     public void clickAddAttachmentsPlan() {
-        addAttachmentPlan.click();
+
+        WebElement mySelectElement = attchamentbutton;
+        Select dropdown = new Select(mySelectElement);
+        dropdown.selectByIndex(1);
 
     }
 
     public void clickAddAttachmentsDocumentation() {
         addAttachmentDocumentation.click();
-            }
-
+    }
 
 
     public MenageProjectPage clickMenage() {
         menage.click();
-        return new MenageProjectPage(driver);    }
+        return new MenageProjectPage(driver);
+    }
 
 
-    public void addattchment(){
+    public void addattchment() {
         attchamentbutton.click();
     }
 

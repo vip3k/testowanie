@@ -1,3 +1,4 @@
+import Main.MainPage;
 import Project.ProjectPage;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
@@ -14,6 +15,8 @@ public class ProjectTest extends TestBase {
 
     @Test
     public void goToProjectPage() {
+
+
         super.loginPage
                 .login(login, pass)
                 .clickProject()
@@ -26,8 +29,20 @@ public class ProjectTest extends TestBase {
     @Test
     public void goToMenagePage() {
         ProjectPage projectPage = PageFactory.initElements(driver, ProjectPage.class);
-        loginPage.login(login, pass).clickProject();
-        projectPage.clickMenage();
+
+        goToProjectPage();
+        projectPage
+                .clickMenage();
+    }
+
+
+    @Test
+    public void goToDocumentation() {
+        ProjectPage projectPage = PageFactory.initElements(driver, ProjectPage.class);
+
+        goToProjectPage();
+        projectPage.clickAddAttachmentsPlan();
+
     }
 
 

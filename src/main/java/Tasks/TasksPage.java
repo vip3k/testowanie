@@ -3,6 +3,7 @@ package Tasks;
 import Main.MainPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertTrue;
 
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class TasksPage extends MainPage {
     WebDriver driver;
+
 
     public TasksPage(WebDriver driver) {
         super(driver);

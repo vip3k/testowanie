@@ -10,6 +10,7 @@ import Tasks.TasksPage;
 import TestBase.TestBasePage;
 import Versions.VersionsPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,9 +39,9 @@ public class MainPage {
     WebElement clickDefects;
     @FindBy(linkText = "Test base")
     WebElement clickTestBase;
-    @FindBy (linkText = "Files")
+    @FindBy(linkText = "Files")
     WebElement clickFiles;
-    @FindBy (xpath = "//*[contains(@alt, 'polski')]")
+    @FindBy(xpath = "//*[contains(@alt, 'polski')]")
     WebElement polishLanguage;
 
 
@@ -52,6 +53,7 @@ public class MainPage {
     public void assertUserIsLoggedIn() {
         assertTrue(driver.findElement(By.id("head-top")).isDisplayed());
     }
+
 
     public ProjectPage clickProject() {
         clickProject.click();

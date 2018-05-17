@@ -2,7 +2,7 @@
 
     <test name="ProjectTest">
 
-        <parameter name="username" value="administrator@testarena.pl"/>
+        <parameter name="userName" value="administrator@testarena.pl"/>
 
         <parameter name="password" value="sumXQQ72$L"/>
 

@@ -2,6 +2,7 @@ package Tags;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -13,6 +14,7 @@ public class TagsPage {
 
     public TagsPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
     public void verifyTagsPage() {
