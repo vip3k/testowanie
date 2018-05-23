@@ -23,5 +23,7 @@ public class LoginTest extends TestBase {
                 .loginButton();
     }
 
+    public void v02(){}
+
 
 }
