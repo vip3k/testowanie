@@ -20,10 +20,13 @@ public class LoginTest extends MainTest{
     @Test
     public void shouldNotLogin() {
         super.loginPage.openLoginPage()
-                .setUser("Wrongusertestnarrrme")
+                .setUser("v01")
                 .setpPasswordInput("haslo123")
                 .loginButton();
 
+    }
+
+    public void v01(){
     }
 
 
